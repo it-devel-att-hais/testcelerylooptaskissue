@@ -85,4 +85,9 @@ celery -A testlooptask beat -l info --scheduler django_celery_beat.schedulers:Da
 * Add new crontab
 * Make new crontab around 20 minutes ago and choose UTC timezone
 * Save PeriodicTask
+
 ![Create new crontab](https://i.ibb.co/84p1Hnk/132.png)
+
+![Create new crontab](https://i.ibb.co/7j5zhb3/134.png)
+
+**Be careful. After update this tasks worker start to run this task in loop**
