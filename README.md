@@ -59,3 +59,26 @@ Superuser created successfully.
 * login: admin | password: admin123
 * Choose part  **PeriodicTask**
 * For now you will see empty
+
+## Set up celery worker and beat
+
+* Open new terminal for run celery worker
+* Enter in project folder and activate venv
+* After, run this command
+```
+celery -A testlooptask worker -l info
+```
+* Open one more terminal for run celery beat
+* Enter in project folder and activate venv
+* After, run this command
+```
+celery -A testlooptask beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+```
+* **For now worker and beat must work**
+
+# (After all setups) Steps for repeat loop task execution
+* [Return to admin panel with periodic tasks](http://127.0.0.1:8000/admin/django_celery_beat/periodictask/)
+* Now you must see at least 2 period tasks
+> * print_hello_world: */1 * * * * (m/h/d/dM/MY) Asia/Almaty
+> * celery.backend_cleanup: 0 4 * * * (m/h/d/dM/MY) Asia/Almaty
+* Select [**print_hello_world: */1 * * * * (m/h/d/dM/MY) Asia/Almaty**](http://127.0.0.1:8000/admin/django_celery_beat/periodictask/2/change/)
