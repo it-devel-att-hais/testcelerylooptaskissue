@@ -91,3 +91,9 @@ celery -A testlooptask beat -l info --scheduler django_celery_beat.schedulers:Da
 ![Create new crontab](https://i.ibb.co/7j5zhb3/134.png)
 
 **Be careful. After update this tasks worker start to run this task in loop**
+### Screen I have chance to make
+![First screen](https://i.ibb.co/cbHVqcW/135.png)
+
+![Second screen](https://i.ibb.co/0K0F0PB/136.png)
+
+![Third screen](https://i.ibb.co/VmCNGD6/137.png)<a href="https://ibb.co/C29tyvL">
