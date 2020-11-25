@@ -82,3 +82,7 @@ celery -A testlooptask beat -l info --scheduler django_celery_beat.schedulers:Da
 > * print_hello_world: */1 * * * * (m/h/d/dM/MY) Asia/Almaty
 > * celery.backend_cleanup: 0 4 * * * (m/h/d/dM/MY) Asia/Almaty
 * Select [**print_hello_world: */1 * * * * (m/h/d/dM/MY) Asia/Almaty**](http://127.0.0.1:8000/admin/django_celery_beat/periodictask/2/change/)
+* Add new crontab
+* Make new crontab around 20 minutes ago and choose UTC timezone
+* Save PeriodicTask
+![Create new crontab](https://i.ibb.co/84p1Hnk/132.png)
